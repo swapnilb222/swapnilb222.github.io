@@ -206,7 +206,7 @@ const PROJECTS = [
     ],
     stack: ["React", "Node", "Pitch", "MVP"],
     detail: "End-to-end: product design, working prototype, financial model, and pitch.",
-    link: "https://github.com/sbhole22/CASE_Presentation_Munger_2026",
+    link: "https://github.com/swapnilb222/CASE_Presentation_Munger_2026",
     visual: "graph",
     span: "md",
   },
