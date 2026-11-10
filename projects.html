@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Swapnil Bhole</title>
-  <meta name="description" content="Projects by Swapnil Bhole: 3rd at Speed Demon 2026, a 5G O-RU PHY testbed on Zynq-7000, a 355x CUDA speedup, an out-of-order RISC-V core and embedded products.">
+  <meta name="description" content="Projects by Swapnil Bhole: top 3 on Track D at Speed Demon 2026, a 5G O-RU PHY testbed on Zynq-7000, a 355x CUDA speedup and an out-of-order RISC-V core.">
   <meta name="author" content="Swapnil Bhole">
   <link rel="canonical" href="https://swapnilb222.github.io/projects.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Swapnil Bhole">
   <meta property="og:title" content="Projects | Swapnil Bhole">
-  <meta property="og:description" content="Projects by Swapnil Bhole: 3rd at Speed Demon 2026, a 5G O-RU PHY testbed on Zynq-7000, a 355x CUDA speedup, an out-of-order RISC-V core and embedded products.">
+  <meta property="og:description" content="Projects by Swapnil Bhole: top 3 on Track D at Speed Demon 2026, a 5G O-RU PHY testbed on Zynq-7000, a 355x CUDA speedup and an out-of-order RISC-V core.">
   <meta property="og:url" content="https://swapnilb222.github.io/projects.html">
   <meta property="og:image" content="https://swapnilb222.github.io/assets/img/og.jpg">
   <meta property="og:image:width" content="1200">
@@ -69,11 +69,11 @@
       <h2 id="perf">Performance &amp; ML Systems</h2>
       <article class="project" id="speed-demon">
         <h3>Speed Demon 2026: four performance rewrites in 72 hours</h3>
-        <p class="meta">Nov 2026 &middot; Solo &middot; C++20 &middot; <a href="https://github.com/swapnilb222/sweet-dreams-demon-sub">Code and optimization logs</a></p>
-        <ul class="figures"><li><b>3rd</b> Track D leaderboard</li><li><b>~850&times;</b> Track D vs. reference</li><li><b>4/4</b> tracks entered</li></ul>
+        <p class="meta">Nov 2026 &middot; Solo &middot; C++20 &middot; <a href="https://github.com/swapnilb222/sweet-dreams-demon-sub">Code and optimization logs</a> &middot; <a href="https://dev.to/swapnilb/23-minutes-before-the-freeze-shortest-paths-at-hackathon-raptors-speed-demon-2kj0">Track D write-up</a></p>
+        <ul class="figures"><li><b>Top 3</b> Track D leaderboard</li><li><b>~850&times;</b> Track D vs. reference</li><li><b>4/4</b> tracks entered</li></ul>
         <ul>
           <li>A 72-hour championship where every entrant gets the same task, the same data and the same scoring machine (Intel i5-13500, 12 threads, 8 GB cap). Output must match the reference byte for byte; the score rewards wall time, peak memory and short code.</li>
-          <li><strong>Track D, graph traversal (3rd place):</strong> 2,000 shortest-path queries on a road network with 1.74M nodes and 5M edges, from 72.69&nbsp;s and 893&nbsp;MB down to 0.085&nbsp;s and 57&nbsp;MB. I contracted pass-through chains, renumbered nodes with locality-preserving BFS so nearby roads sit together in memory, and used a bidirectional Dijkstra with a bucket queue.</li>
+          <li><strong>Track D, graph traversal (top 3 on the leaderboard):</strong> 2,000 shortest-path queries on a road network with 1.74M nodes and 5M edges, from 72.69&nbsp;s and 893&nbsp;MB down to 0.085&nbsp;s and 57&nbsp;MB. I contracted pass-through chains, renumbered nodes with locality-preserving BFS so nearby roads sit together in memory, and used a bidirectional Dijkstra with a bucket queue. I wrote up how Track D came together, including the changes that made it slower, in <a href="https://dev.to/swapnilb/23-minutes-before-the-freeze-shortest-paths-at-hackathon-raptors-speed-demon-2kj0">23 Minutes Before the Freeze</a>.</li>
           <li><strong>Tracks A&ndash;C:</strong> AVX2 SIMD parsing, carry-less-multiply quote masks for CSV, AES-NI hashing, lock-free shared hash tables and branch-free percentile selection.</li>
           <li>Every version checked against the reference output (sha256) and run under AddressSanitizer, UBSan and ThreadSanitizer.</li>
         </ul>
@@ -83,7 +83,7 @@
             <tr><td>A &middot; Ingest</td><td>3.1M log lines &rarr; p50/p95/p99 latency and error rates per endpoint per hour</td><td class="num">32.05 s</td><td class="num">0.020 s, 24 MB</td><td class="num">~1,600&times;</td></tr>
             <tr><td>B &middot; Index</td><td>50,000 boolean and phrase queries over a 250 MB corpus</td><td class="num">56.35 s, 2.2 GB</td><td class="num">0.217 s, 41 MB</td><td class="num">~260&times;</td></tr>
             <tr><td>C &middot; Join</td><td>CSV join with per-country totals and distinct counts</td><td class="num">14.44 s, 367 MB</td><td class="num">0.024 s, 9 MB</td><td class="num">~600&times;</td></tr>
-            <tr><td>D &middot; Traverse</td><td>2,000 shortest paths on a 1.74M-node road graph</td><td class="num">72.69 s, 893 MB</td><td class="num">0.085 s, 57 MB</td><td class="num">~850&times; &middot; 3rd</td></tr>
+            <tr><td>D &middot; Traverse</td><td>2,000 shortest paths on a 1.74M-node road graph</td><td class="num">72.69 s, 893 MB</td><td class="num">0.085 s, 57 MB</td><td class="num">~850&times; &middot; top 3</td></tr>
           </tbody>
         </table>
         <p class="stack">C++20 · AVX2 · lock-free data structures · PGO · perf · Valgrind · Docker</p>

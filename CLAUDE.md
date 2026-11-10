@@ -47,16 +47,18 @@ and `README.md`) and the event brief at `C:\SWAPNIL\SpeedDemon\challenge.md`.
 | A · Ingest | 3.1M log lines → per-endpoint p50/p95/p99 + error rates per hour | 32.05 s | **0.020 s, 24 MB** | ~1,600× | rank 11 when recorded |
 | B · Index | 50,000 boolean + phrase queries over a 250 MB corpus | 56.35 s, 2.2 GB | **0.217 s, 41 MB** | ~260× | rank 29 when recorded (v12) |
 | C · Join | CSV join + per-country aggregates/distinct counts | 14.44 s, 367 MB | **0.024 s, 9 MB** | ~600× | 83.75 points |
-| D · Traverse | 2,000 shortest-path queries, 1.74M-node / 5M-edge road graph | 72.69 s, 893 MB | **0.0849 s, 56.6 MB** | ~850× | **3rd place on the Track D leaderboard** |
+| D · Traverse | 2,000 shortest-path queries, 1.74M-node / 5M-edge road graph | 72.69 s, 893 MB | **0.0849 s, 56.6 MB** | ~850× | **top 3 on the Track D leaderboard** |
 
 - Techniques to mention (pick 3–4 for the card, full list on the project page):
   AVX2 SIMD parsing, carry-less-multiply quote masks, AES-NI hashing, lock-free shared hash tables,
   branch-free selection for percentiles, bidirectional Dijkstra with bucket queues, chain contraction +
   locality-preserving BFS renumbering, profile-guided static builds, memory-peak engineering
   (THP control, `MADV_DONTNEED`), and verification with ASan/UBSan/TSan plus sha256 checks on every run.
-- Placement (confirmed by Swapnil): **3rd on the Track D (Traverse) leaderboard**, as a solo entrant. That is the
+- Placement: write it as **"top 3 of the Track D (Traverse) leaderboard"**, solo entrant (Swapnil's wording; do not write "3rd" or "placed 3rd"). That is the
   headline result. Don't claim a prize or an overall rank. Track A/B ranks above are mid-event board
   positions; leave them off the site.
+- Write-up (Track D, on DEV): https://dev.to/swapnilb/23-minutes-before-the-freeze-shortest-paths-at-hackathon-raptors-speed-demon-2kj0
+  (linked from the project meta line, the Track D bullet, and the Nov 2026 news item).
 - Focus-area branch: **Performance & ML Systems** (listed first in that branch).
 
 ## Architecture
@@ -112,10 +114,10 @@ The old React app (`src/`) has been removed; it remains in git history.
    ML systems" → branches, each listing its projects with a short metric:
    - RTL & Computer Architecture: RISC-V 2-way OoO superscalar, DVB-RCS turbo decoder
    - 5G / Wireless PHY: 5G O-RU PHY on Zynq-7000, LTE eNodeB 3GPP validation, ML joint coded modulation for LoRa
-   - Performance & ML Systems: Speed Demon 2026 (3rd on Track D, solo; up to ~1,600× faster than reference), CUDA CNN inference (355×), GPU novelty metric for MLIPs, assistive vision system
+   - Performance & ML Systems: Speed Demon 2026 (top 3 on Track D, solo; up to ~1,600× faster than reference), CUDA CNN inference (355×), GPU novelty metric for MLIPs, assistive vision system
    - Embedded & Products: OpenExo data-collection software, SIM908 fuel-notification device, ESP32 IoT, SmartQRX
 4. Selected highlights (3–4 hard numbers, e.g. 355× CUDA speedup, 1.6M+ packets zero drops at 245.76 Mbps,
-   Speed Demon: 3rd on Track D, 72.69 s → 0.085 s, 6 yrs 5G/LTE).
+   Speed Demon: top 3 on Track D, 72.69 s → 0.085 s, 6 yrs 5G/LTE).
 5. **News**: newest first, 5–6 items, "All news →" link to `news.html`.
 
 ## Design system (light theme)
@@ -168,9 +170,9 @@ request indexing for the home page; put the URL on the LinkedIn profile, GitHub 
 
 ## News (newest first)
 
-- Nov 2026: Placed 3rd on the Track D (graph traversal) leaderboard at Speed Demon 2026, a 72-hour
+- Nov 2026: Finished in the top 3 of the Track D (graph traversal) leaderboard at Speed Demon 2026, a 72-hour
   performance-engineering championship, competing solo. Rewrote all four tracks in dependency-free C++;
-  up to ~1,600× faster than the Python reference on the official scoring machine. Link the repo.
+  up to ~1,600× faster than the Python reference on the official scoring machine. Link the repo and the write-up.
 - Sep 2026: Started as Software Lead, OpenExo team, University of Michigan.
 - May 2026: Graduated with M.S. in ECE from the University of Michigan.
 - 2026: LeaderShape Institute, University of Michigan.
